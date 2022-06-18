@@ -15,17 +15,57 @@ body{
 background-color: crimson;
 position: fixed;
 width: 100%;
+padding: 1.2rem;
 }
 
 .navbar .logo a{
     color: #fff;
-    font-size: 3em;
+    font-size: 2.2em;
     font-weight: 600;
 }   
 
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
 .navbar .menu li a{
     color: #fff;
-    font-size: 2em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 1.2rem;
+    font-family: 'poppins', sans-serif;
 
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+
+}
+.container{
+    margin: auto;
+    padding: 0 5em;
+    /* max-width: 1500px; */
+
+}
+
+/* home section */
+.home{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: blue;
+    color: blue ;
+    height: 100vh;
+
+}
+
+.text1{
+    color: aqua;
+    font-family: 'poppins', sans-serif;
 }
