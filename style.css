@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /* themes */
 .light {
     
@@ -89,12 +90,17 @@ ul{
     
 }
 header{
+    font-family: 'Press Start 2P';
     padding: 1em;
     background-color: var(--bg);
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding-bottom: 3.5em;
     text-align: center;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+h2{
+    /* margin: 3em; */
+    padding: 3em;
 }
 
 /* dropdown styles */
@@ -124,6 +130,7 @@ header{
 .dark .menu li a:hover{
     background-color: var(--nav-text);
     color: #0b0c10;
+    /* cursor: pointer; */
     transition: color .50s ease-in-out, background .15s ease-in-out;
     /* border: 2px solid; */
 }
