@@ -1,22 +1,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+/* :root {
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
+} */
+.light {
+    
+    --bg: var(--light-bg3);
+    --bg-nav: linear-gradient(to right, var(--dark-bg), var(--dark-gray));
+    --bg-nav-bar:var(--light-bg);
+    --bg-dropdown: var(--gray6);
+    --nav-text: black;  
+    --bg-header: var(--light-bg2);
+    --text:var(--light-text2);
+    --border-color: var(--purple);
+    
+}
+  
 
+.dark {
+    --bg: var(--dark-gray);
+    --bg-nav: linear-gradient(to right, var(--dark-bg), var(--dark-gray));
+    --bg-nav-bar:var(--dark-bg);
+    --bg-dropdown: var(--gray6);
+    --text: var(--dark-text1);
+    --nav-text: var(--dark-text2);
+    --bg-header: var(--dark-light-gray);
+    --border-color: var(--purple);
+}
 :root{
-    /* --primary-color:#0b0c10;
-    --primart-text: #66fcf1;
-    --primary-text1: #c5c6c7; */
-    /* --primary-text1: #ffe400; */
-    /* --primary-text1: #ff652f; */
-    --secondary-color: #1f2833;
-    --secondary-light-gray: #45829e;
+    --dark-bg:#0b0c10;
+    --dark-text1: #66fcf1;
+    --dark-text2: #c5c6c7; 
+    --yellow: #ffe400;
+    --orange: #ff652f;
+    --dark-gray: #1f2833;
+    --dark-light-gray: #2a5163;
 
-    /* light theme */
-    --primary-color:#e7717d;
-    --primart-text: #66fcf1;
-    --primary-text1: #7e685a;
-    --secondary-color: #c2b9b0;
-    --secondary-color: #fff;
-
+    
+    --light-bg:#e7717d;
+    --light-text1: #66fcf1;
+    --light-text2: #685143;
+    --light-bg2: #c2b9b0;
+    --light-bg3: #fff;
 }
 *{
     box-sizing: border-box;
@@ -24,10 +58,14 @@
     margin: 0;
     padding: 0;
 }
-body{
-    padding: 0;
+
+body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--bg-header);
+    transition: background 600ms ease-in-out;
 }
 
 ul{
@@ -44,8 +82,8 @@ ul{
 .navbar{
     height: 4rem;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: var(--bg-nav-bar);
+    color: var(--nav-text);
 }
 .menu{
     display: flex;
@@ -55,7 +93,7 @@ ul{
 }
 header{
     padding: 1em;
-    background: red;
+    background-color: var(--bg);
     margin-bottom: 1em;
     padding-bottom: 3.5em;
     text-align: center;
