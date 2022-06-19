@@ -1,17 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-/* :root {
-    --gray0: #f8f8f8;
-    --gray1: #dbe1e8;
-    --gray2: #b2becd;
-    --gray3: #6c7983;
-    --gray4: #454e56;
-    --gray5: #2a2e35;
-    --gray6: #12181b;
-    --blue: #0084a5;
-    --purple: #a82dd1;
-    --yellow: #fff565;
-} */
+/* themes */
 .light {
     
     --bg: var(--light-bg3);
@@ -22,10 +11,9 @@
     --bg-header: var(--light-bg2);
     --text:var(--light-text2);
     --border-color: var(--purple);
+    --dropDown-bg:var(--light-bg2);
     
 }
-  
-
 .dark {
     --bg: var(--dark-gray);
     --bg-nav: linear-gradient(to right, var(--dark-bg), var(--dark-gray));
@@ -35,6 +23,7 @@
     --nav-text: var(--dark-text2);
     --bg-header: var(--dark-light-gray);
     --border-color: var(--purple);
+    --dropDown-bg:var(--dark-light-gray);
 }
 :root{
     --dark-bg:#0b0c10;
@@ -60,12 +49,13 @@
 }
 
 body {
+    
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
     background: var(--bg-header);
-    transition: background 600ms ease-in-out;
+    transition: background 600ms ease-in-out, color 800ms ease-out;
 }
 
 ul{
@@ -77,6 +67,8 @@ ul{
 .navbar .menu li a{
     color: currentColor;
     text-decoration:none;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .navbar{
@@ -91,6 +83,11 @@ ul{
     justify-content: space-evenly;
     height: 100%;
 }
+.menu li a{
+    padding: 5px;
+    margin: 5px;
+    
+}
 header{
     padding: 1em;
     background-color: var(--bg);
@@ -99,6 +96,8 @@ header{
     text-align: center;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
+
+/* dropdown styles */
 
 .dropdown{
     position: absolute;
@@ -110,7 +109,7 @@ header{
     height: 3rem;
 
     /* width: auto;  */
-    background-color: blue;
+    background-color:var(--dropDown-bg);
     border-top: 2px solid white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px ;
@@ -118,9 +117,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* box-shadow: rgba(2,8,10,0.1) 0px o.175em .5em; */
+    box-shadow: 2px 2px 2px 1px;
     transform: translateX(-40%);
     transition: opacity .15s ease-in-out;
+}
+.dark .menu li a:hover{
+    background-color: var(--nav-text);
+    color: #0b0c10;
+    transition: color .50s ease-in-out, background .15s ease-in-out;
+    /* border: 2px solid; */
 }
 .has-dropdown:hover .dropdown{
     opacity: 1;
@@ -133,41 +138,41 @@ header{
     /* padding-left: 10px; */
     font-weight: bold;
 }
-/* .dropdown-item a::before{
-    content: ' ';
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 1rem;
-    height:1rem;
-    display:inline-block;
-    vertical-align: middle;
-    margin-right:10px;
-
-
-} */
 .fa-moon::after{
     content: 'Light';
-    border: 2px solid white;
+    border: 2px solid var(--text);
     border-radius: 20%;
     margin: 2px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 .fa-sun::after{
     content: 'Dark';
-    border: 2px solid white;
+    border: 2px solid var(--text);
     border-radius: 20%;
     margin: 2px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    background-color: aqua;
-    color: black;   
+    /* background-color: aqua; */
+    /* color: black;    */
 }
-.dropdown-item:hover .fa-sun::after{
+ .dropdown-item:hover .fa-sun::after, .dropdown-item:hover .fa-moon::after{
    
-    border: 2px solid red;
-    color: red;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    transition: all .2s ease-in-out;
    
+}
+.dark .fa-sun,.dark .fa-sun::after{
+    color: var(--orange);
+    border-color:var(--orange) ;
+    transition: all .3s ease-in-out;
+}
+.light .fa-moon ,.light .fa-moon::after{
+    color:var(--orange);
+    border-color:var(--orange) ;
+    transition: all .3s ease-in-out;
+
 }
 .dropdown-item{
     margin: 20px;
@@ -176,7 +181,3 @@ header{
     margin: auto 0 auto 1rem;
 }
 
-.text1{
-    /* color: aqua; */
-   
-}
