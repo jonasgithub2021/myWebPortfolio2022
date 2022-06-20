@@ -55,7 +55,9 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
-    background: var(--bg-header);
+    /* background: var(--bg-header); */
+    background-color: var(--bg-header);
+
     transition: background 600ms ease-in-out, color 800ms ease-out;
 }
 
@@ -73,10 +75,18 @@ ul{
 }
 
 .navbar{
+    position: fixed;
+    top: 0;
     height: 4rem;
     width: 100%;
-    background-color: var(--bg-nav-bar);
+    background-color:var(--bg) ;
     color: var(--nav-text);
+    z-index: 2;
+    transition: background .3s ease-in-out;
+}
+.navbar.sticky{
+    background-color: var(--bg-nav-bar);
+    transition: background .3s ease-in-out;
 }
 .menu{
     display: flex;
@@ -90,6 +100,7 @@ ul{
     
 }
 header{
+    /* overflow: hidden; */
     font-family: 'Press Start 2P';
     padding: 1em;
     background-color: var(--bg);
@@ -123,17 +134,18 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 2px 2px 2px 1px;
+    box-shadow: 2px 2px 2px 1px black;
     transform: translateX(-40%);
     transition: opacity .15s ease-in-out;
 }
-.dark .menu li a:hover{
+.menu li a:hover{
     background-color: var(--nav-text);
-    color: #0b0c10;
+    color: var(--bg-nav-bar);
     /* cursor: pointer; */
     transition: color .50s ease-in-out, background .15s ease-in-out;
     /* border: 2px solid; */
 }
+
 .has-dropdown:hover .dropdown{
     opacity: 1;
     /* pointer-events: auto; */
@@ -195,6 +207,12 @@ h2{
 footer{
     background-color:var(--bg) ;
     padding-top: 10px;
+    height: auto;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0; */
 }
 
 .footer-content{
@@ -248,4 +266,27 @@ footer{
     word-spacing: 4px;
     font-size: .8rem;
     font-weight: 200;
+}
+.footer-bottom span{
+
+    opacity: .8;
+    font-weight: 1000;
+}
+/* about */
+.about{
+    transform: translateY(30%);
+    background-image: url('images/bg.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: ;
+}
+.about .img{
+    padding: 2rem;
+}
+/* .img img{
+    height: 400px;
+    width: 400px; */
 }
