@@ -60,6 +60,9 @@ body {
     /* background: url('images/bg-blur-pink.jpg') no-repeat center; */
     transition: background 600ms ease-in-out, color 800ms ease-out;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* body.light{
       background: url('images/bg-blur-pink.jpg') no-repeat center;
      
