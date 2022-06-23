@@ -51,9 +51,10 @@
 
 body {
     
-    margin: 0;
+    margin: 0 ;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+
     color: var(--text);
     background: var(--bg-header);
     
@@ -101,7 +102,11 @@ ul{
     font-weight:1000;
     transition: font-weight .3s ease-in-out;
 }
-
+#home{
+    position: absolute;
+    top: 0;
+    
+}
 .menu{
     color: var(--nav-text);
     /* z-index: 3; */
@@ -138,7 +143,7 @@ header{
     padding: 1em;
     background-color: var(--bg);
     margin-top: 50px;
-    margin-bottom: 2em;
+    margin-bottom: 70vh;
     padding-bottom: 3.5em;
     text-align: center;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
@@ -329,7 +334,7 @@ footer{
     background: url('images/bg-colorful-sky.jpg') no-repeat center;
 }
 main{
-    transform: translateY(15%);
+    /* transform: translateY(15%); */
     /* padding: 20px; */
     /* margin-top:50px; */
 
@@ -358,7 +363,7 @@ main{
 }
 .img-container .img{
     /* padding: 2rem; */
-    background: url('images/profile.jpg') no-repeat ;
+    background: url('images/jonas.jpg') no-repeat ;
     width: 100%;
     padding-top: 100%;
     height: 100%;
@@ -372,7 +377,30 @@ main{
 .para{
     display: inline-block ;
 }
-/* .img img{
-    height: 400px;
-    width: 400px; */
+
+/* section skills */
+.section-container ul{
+
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row ;
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 2rem;
+
+}
+.section-container ul li{
+    border: 2px solid black;
+   
+
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+
+.skills{
+    margin: 2rem 0 0 0;
+    text-align: center;
 }

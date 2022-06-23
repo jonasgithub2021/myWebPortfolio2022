@@ -28,7 +28,7 @@ if(currentTheme){
       
 }
 else{
-    $("body").addClass(currentTheme);
+    $("body").addClass('dark');
 }
 
 darkBtn.onclick = () => {
