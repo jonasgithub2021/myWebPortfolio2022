@@ -406,8 +406,9 @@ main{
     /* width: 100%; */
     background-repeat:inherit;
     background-position: center;
-    background-size:contain;
+    background-size:cover;
     text-align: center;
+  
 }
 .section-bg{
     
@@ -420,6 +421,6 @@ main{
     background-image: url('images/html.jpg') ;
     background-size:cover;
     padding: 8rem 0 0;
-    max-width: 35ch;
-    
+    max-width: 50ch;
+    border-radius: .5rem;
 }
